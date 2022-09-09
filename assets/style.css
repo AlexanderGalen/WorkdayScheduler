@@ -70,14 +70,18 @@ textarea {
   background-color: #06AED5;
   color: white;
   cursor: pointer;
+
 }
 
 .save-icon {
   font-style: normal;
   font-size: 30px;
+  position:relative;
+  top: -5px;
+  
 }
 
 .save-btn i:hover {
-  font-size: 35px;
+  color: #77dd77;
   transition: all .3s ease-in-out;
 }
