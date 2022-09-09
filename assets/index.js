@@ -11,6 +11,7 @@ for (let i = 0; i < timeBlocks.length; i++) {
 
     // get saved value from localstorage for this hour and fill the textArea with it
     const savedValue = localStorage.getItem(timeBlockHour)
+    timeBlockInput.val(savedValue);
  
     // if it's in the past
     if(timeBlockHour < currentHour) {
@@ -33,7 +34,7 @@ let saveButtons = $(".save-btn").click(function() {
     const savedHour = $(this).attr("data-hour");
     // get value of the textArea to save it
     const textToSave = $(`#${savedHour}`).val();
-    
+
     // save text into localstorage under a key for the saved hour
     localStorage.setItem(savedHour, textToSave);
 
